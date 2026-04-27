@@ -1,4 +1,4 @@
-# CareIT - Responsible AI Documentation
+CareIT - Responsible AI Documentation
 
 CareIT is a telehealth platform that connects solo medical practitioners with patients, and we use AI to streamline triage, clinical documentation, and interoperability. Because we operate in healthcare, we hold our AI work to a higher bar than we would in most other domains. Safety, fairness, and transparency are not nice-to-haves here. They are the baseline.
 
@@ -6,7 +6,7 @@ This document covers our Responsible AI posture across the four pillars of our a
 
 ---
 
-## 1. Data Sources
+1. Data Sources
 
 We took a deliberately conservative position on data, and the short version is that no real patient information was used at any point in this project.
 
@@ -18,7 +18,7 @@ We took a deliberately conservative position on data, and the short version is t
 
 ---
 
-## 2. Model Choices
+2. Model Choices
 
 We picked each model for a specific job, and we kept the role of each one narrow on purpose.
 
@@ -30,7 +30,7 @@ We picked each model for a specific job, and we kept the role of each one narrow
 
 ---
 
-## 3. Bias Considerations
+3. Bias Considerations
 
 We are a small team, so rather than make sweeping claims about bias mitigation we prefer to name the specific bias surfaces we have and describe what we put in place for each one.
 
@@ -44,7 +44,7 @@ We are a small team, so rather than make sweeping claims about bias mitigation w
 
 ---
 
-## 4. Failure Cases and Fallbacks
+4. Failure Cases and Fallbacks
 
 We tested the system against the failures we expected to actually encounter, and we list them here with the mitigation we put in place.
 
