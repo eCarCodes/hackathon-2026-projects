@@ -79,3 +79,41 @@ Tech Stack:
 Hackathon Context:
 - Built during CareDevi AI Hackathon with a team.
 - Original prompt in HACKATHON.md
+
+Demo Walkthrough (Screenshots)
+
+1. Front page
+![Front page](Demo/01-frontPage.png)
+
+2. Login page
+![Login page](Demo/02-loginPage.png)
+
+3. Patient searches for a doctor
+![Patient searches doctor](Demo/03-patientSearchDoctor.png)
+
+4. AI symptom intake
+![AI symptom intake](Demo/04-AI.symptomIntake.png)
+
+5. Patient chooses a doctor
+![Choose doctor](Demo/05-chooseDoctor.png)
+
+6. Patient books a time slot
+![Book time slot](Demo/06-bookTimeSlot.png)
+
+7. Booking success confirmation
+![Booking success](Demo/07-successBook.png)
+
+8. Patient joins consultation
+![Patient joins consultation](Demo/07.1-patientJoinConsultation.png)
+
+9. Doctor dashboard
+![Doctor dashboard](Demo/08-doctorDashboard.png)
+
+10. Doctor pastes consultation history
+![Doctor pastes consultation history](Demo/09-doctorPastesConsultationHistory.png)
+
+11. SOAP guided notes
+![SOAP guided notes](Demo/010-soapGuidedNotes.png)
+
+12. Verification and FHIR export
+![Verification and FHIR export](Demo/011-verificationAndFHIRexport.png)
