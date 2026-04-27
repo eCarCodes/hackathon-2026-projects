@@ -65,7 +65,7 @@ My Role:
 Database Engineer (Eric Cariaga)
 - Designed and implemented Supabase database schema for patient, doctor, and appointment workflows
 - Built Python-based backend integration layer to interface with Supabase
-- Enforced booking integrity to prevent double-bookings and race-condition conflicts
+- Enforced booking integrity with DB-level uniqueness constraints to prevent double-bookings
 - Implemented validation logic and lightweight API wrappers for safe read/write operations
 - Supported reliable local development setup and database reset/migration workflows for the team
 
