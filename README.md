@@ -1,5 +1,12 @@
 # CareIT Website
 
+## Team
+
+- Prajan Manoj Kumar Rekha — `PrajanManojKumarRekha`
+- Eric Cariaga — `eCarCodes`
+- Jessica C O'Bonna — `jessic-o`
+- Shayan Ali — `CodewithShayan456`
+
 ## Project Overview
 
 This system streamlines the clinical workflow from patient intake to interoperable medical record generation, combining AI-assisted decision-making with strict human validation and standards-based data export.
