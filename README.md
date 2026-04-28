@@ -1,53 +1,44 @@
-CareIT
+# CareIT Website
 
-Project Overview
+## Project Overview
 
-AI-Powered Triage
+This system streamlines the clinical workflow from patient intake to interoperable medical record generation, combining AI-assisted decision-making with strict human validation and standards-based data export.
+
+### AI-Powered Triage
 - Patients input symptoms in free-form text
 - NLP-based triage recommends the most relevant medical specialty
-- Provides transparent rationale and allows user override for safety and control
+- Recommendation is non-binding — users can confirm or override for safety
 
-Doctor Discovery System
-- Maps patient needs to available practitioners using geospatial search
+### Doctor Discovery System
+- Maps patient needs to practitioners using geospatial search
 - Integrates OpenStreetMap (Overpass API + Nominatim) for real-world provider data
-- Graceful fallback to seeded database ensures system reliability
+- Graceful fallback to a seeded Supabase dataset ensures reliability during API downtime
 
-Appointment Booking
-- Lightweight scheduling system with real-time availability
+### Appointment Booking
+- Lightweight scheduling system with validated availability
 - Secure storage of bookings with patient/doctor associations
-- Enforced data integrity through backend constraints
+- Enforced data integrity via backend constraints
 
-AI SOAP Note Generation
-- Converts clinical conversation transcripts into structured SOAP notes:
+### AI SOAP Note Generation
+- Converts clinical transcripts into structured SOAP notes:
 - Subjective
 - Objective
 - Assessment
 - Plan
-- Ensures clinician oversight with mandatory review step before approval
 
-Human-in-the-Loop Validation
-- Doctors can edit and approve AI-generated clinical documentation
-- System enforces approval gating at the API level (not just UI)
-- Prevents unverified clinical data from being exported
+### Human-in-the-Loop Validation
+- Clinicians review and edit AI-generated notes before approval
+- Approval gating enforced at the API layer — unapproved notes cannot be exported
 
-FHIR-Compatible Export Pipeline
+### FHIR-Compatible Export Pipeline
 - Generates deterministic FHIR R4 JSON bundles from approved encounters:
-- Consent resources
+- Consent
 - Composition (SOAP note)
-- MedicationRequest (when applicable)
-- Ensures interoperability with modern EMR systems
-- Controlled-substance logic enforced at serialization layer
+- MedicationRequest (if applicable)
+- Controlled-substance rules enforced during serialization
+- Output is consistent and testable (same input → identical output)
 
-Core Flow:
-- Patient submits symptom description
-- AI triage recommends specialty
-- System retrieves nearby doctors (or fallback dataset)
-- Patient books appointment
-- Doctor conducts encounter and generates SOAP note
-- Doctor reviews and approves documentation
-- System exports FHIR-compliant medical record bundle
-
-Why it matters:
+## Why it matters:
 
 Healthcare systems in clinical settings are often fragmented, manual, and difficult to scale for small providers. This project demonstrates how AI can responsibly:
 - Reduce administrative workload for clinicians
@@ -55,12 +46,12 @@ Healthcare systems in clinical settings are often fragmented, manual, and diffic
 - Standardize messy clinical documentation
 - Enable interoperability with modern healthcare systems
 
-Features:
+## Features:
 - Voice → text intake
 - AI structuring into medical format
 - FHIR-compatible output
 
-My Role:
+## My Role:
 
 Database Engineer (Eric Cariaga)
 - Designed and implemented Supabase database schema for patient, doctor, and appointment workflows
@@ -69,18 +60,18 @@ Database Engineer (Eric Cariaga)
 - Implemented validation logic and lightweight API wrappers for safe read/write operations
 - Supported reliable local development setup and database reset/migration workflows for the team
 
-Tech Stack:
+## Tech Stack:
 - Frontend: Next.js 14, React 18, TypeScript, Tailwind CSS
 - API: FastAPI, Pydantic
 - Core Logic: Python 3.12+ (`dataclasses`, deterministic processing)
 - Database: Supabase (PostgreSQL)
 - Interoperability: FHIR R4 JSON Bundle
 
-Hackathon Context:
+## Hackathon Context:
 - Built during CareDevi AI Hackathon with a team.
 - Original prompt in HACKATHON.md
 
-Demo Walkthrough (Screenshots)
+## Demo Walkthrough (Screenshots)
 
 1. Front page
 ![Front page](Demo/01-frontPage.png)
